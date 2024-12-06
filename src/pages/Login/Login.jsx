@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 // import instance from '../../services/AxiosOder';
 import { toast } from 'react-toastify';
 
-import { useNavigate, useNavigation } from 'react-router-dom';
+import { Navigate, useNavigate, useNavigation } from 'react-router-dom';
 import instance from '../../../services/axiosOrder';
 
 
@@ -62,13 +62,11 @@ export default function Login() {
                 localStorage.setItem('ocm-token', res.data.token);
                 localStorage.setItem('user-role', res.data.role)
 
-                if(role==='student'){
-                    console.log("user is admin");
-                }
+                
 
                 setTimeout(() => {
-                    navigate('/home');
                     window.location.reload();
+                    Navigate('/home')
                 }, 2000);
 
             })
