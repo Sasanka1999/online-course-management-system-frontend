@@ -6,12 +6,11 @@ import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { createTheme } from "@mui/material/styles";
 import Dashboard from "../Dashboard/Dashboard";
-import Orders from "../Orders/Orders";
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import GroupAddRoundedIcon from '@mui/icons-material/GroupAddRounded';
-import SchoolTwoToneIcon from '@mui/icons-material/SchoolTwoTone';
+import Courses from "../Orders/Courses";
 
 // Navigation Configuration
 const NAVIGATION = [
@@ -133,7 +132,7 @@ function Home() {
           )}
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/orders" element={<Orders />} />
+            <Route path="/courses" element={<Courses />} />
             <Route path="*" element={<Dashboard />} />
           </Routes>
         </Box>
