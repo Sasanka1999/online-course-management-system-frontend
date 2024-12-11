@@ -60,9 +60,11 @@ export default function Login() {
                 });
 
                 localStorage.setItem('ocm-token', res.data.token);
-                localStorage.setItem('user-role', res.data.role)
+                localStorage.setItem('user-role', res.data.role);
+                localStorage.setItem("instructor-id", res.data.instructorId);  
 
-                
+
+
 
                 setTimeout(() => {
                     window.location.reload();
