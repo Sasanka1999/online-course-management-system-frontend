@@ -11,6 +11,8 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import GroupAddRoundedIcon from '@mui/icons-material/GroupAddRounded';
 import Courses from "../Orders/Courses";
+import AddCourse from "../AddCourse/AddCourse";
+import RegisterUser from "../RegisterUser/RegisterUser";
 
 // Navigation Configuration
 const NAVIGATION = [
@@ -27,16 +29,16 @@ const NAVIGATION = [
     path: "/courses",
   },
   {
-    segment: "add-courses",
+    segment: "add-course",
     title: "Add Courses",
     icon: <BookmarkAddIcon />,
-    path: "/add-courses",
+    path: "/add-course",
   },
   {
-    segment: "add-users",
+    segment: "registerUser",
     title: "Add Users",
     icon: <GroupAddRoundedIcon />,
-    path: "/add-users",
+    path: "/registerUser",
   },
 ];
 
@@ -133,6 +135,8 @@ function Home() {
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/add-course" element={<AddCourse />} />
+            <Route path="/registerUser" element={<RegisterUser />} />
             <Route path="*" element={<Dashboard />} />
           </Routes>
         </Box>

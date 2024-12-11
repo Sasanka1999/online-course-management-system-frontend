@@ -71,7 +71,7 @@ const CourseCard = ({ course }) => {
                   size="small"
                   variant="contained"
                   color="primary"
-                  onClick={() => handleDownload(material.fileName)} // Pass fileName for download
+                  onClick={() => handleDownload(material.fileName)} 
                 >
                   Download
                 </Button>
